@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive Thing - Boostrap 5</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="styleresponsive.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="p-5">
+          <div class="container">
+              <div class="row g-4">
+                  <div class="col-md">
+                      <h2 class="text-center mb-4">Contact Info</h2>
+                      <ul class="list-group list-group-flush lead">
+                          <li class="list-group-item">
+                              <span class="fw-bold">Main Location: </span> 50 Main St. Boston MA
+                          </li>
+
+                          <li class="list-group-item">
+                            <span class="fw-bold">Phone Number: </span> 6969696969
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email: </span> karl69@bruhmail.com
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-md">
+                      <div id="map"></div>
+                  </div>
+              </div>
+          </div>
+          <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoibm90LW5vYyIsImEiOiJja3UzanZpdWoxMHViMm5uaTdvNWFtMzZ4In0.VjYW12u1_ffNDWet_tCeQg';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            canter: [-71.060982, 42.35725],
+            zoom: 18,
+
+            });
+          </script>
+      </section>
+</body>
+</html>
